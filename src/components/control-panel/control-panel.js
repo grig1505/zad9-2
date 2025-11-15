@@ -10,19 +10,17 @@ export const ControlPanel = () => {
 
 	const onTodoAdd = () => {
 		dispatch({
-			type: ACTION_TYPE.ADD_TODO,
+			type: ACTION_TYPE.ADD_AND_EDIT_TODO,
 			payload: {
-				id: NEW_TODO_ID,
-				title: '',
-				completed: false,
-			},
-		});
-
-		dispatch({
-			type: ACTION_TYPE.EDIT_TODO,
-			payload: {
-				id: NEW_TODO_ID,
-				title: '',
+				todo: {
+					id: NEW_TODO_ID,
+					title: '',
+					completed: false,
+				},
+				editing: {
+					id: NEW_TODO_ID,
+					title: '',
+				},
 			},
 		});
 	};

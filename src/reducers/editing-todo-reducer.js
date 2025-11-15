@@ -10,6 +10,11 @@ export const editingTodoReducer = (
 	{ type, payload },
 ) => {
 	switch (type) {
+		case ACTION_TYPE.ADD_AND_EDIT_TODO:
+			return {
+				...state,
+				...payload.editing,
+			};
 		case ACTION_TYPE.EDIT_TODO:
 			return {
 				...state,
